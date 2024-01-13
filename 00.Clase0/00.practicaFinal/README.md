@@ -1,6 +1,6 @@
 ## Práctica Final. Programación Orientada a Objetos. 
 ### Desarrollo de un software pseudo-comercial con interfaz gráfica 
-El alumno podrá elegir entre desarrollar una aplicación Swing que gestione un tipo cualquiera de objeto (A) o desarrollar un JPaint. Ambas aplicaciones tendrán persitencia en disco. 
+El alumno tendrá que desarrollar una aplicación Swing que gestione un tipo cualquiera de objeto, tenga persistencia de fichero y algún tipo de gestión de hilos. 
 
 #### Fecha de entrega:
 
@@ -18,7 +18,7 @@ Un fichero ZIP que contenga:
 
 Gracias!
 
-#### Descripción de la práctica A:
+#### Descripción de la práctica:
 
 Desarrollar una aplicación gráfica desarrollada en Swing que gestione un tipo cualquiera de objeto (a elegir por el alumno) con persitencia en disco.
 
@@ -27,6 +27,7 @@ La aplicación a desarrollar debe cumplir con los siguientes requisitos funciona
 - Altas/Bajas/Modificaciones de objetos.
 - Generación de listados en función de dos criterios de filtrado introducidos por el usuario. (P.e: mostrar todas las personas, sólo las que vivan en XXXX o las que vivan XXXX y estén casadas)
 - Importación/Exportación de la información del programa a un fichero TXT, XML, JSON o YAML
+- Usa hilos para gestionar ejecuciones en paralelo en la aplicación.
 Es obligatorio emplear nuevos componentes gráficos (JTable, JComboBox, JTabbedPane, etc.) o otras librerías o funcionalidades no vistas en clase.
 
 ##### Evaluación de la práctica: Todos los alumnos parten de un 9.0. Nota mínima: 0. Nota máxima: 10.5.
@@ -62,25 +63,5 @@ alto: JTable, JTree, etc.
 ```
     Si (diseño == MALO) nota -= 1.5ptos; Else Si (diseño == REGULAR) nota -= 0.75ptos;
 ```
- 
-
-#### Descripción de la práctica B:
-
-Desarrollar una aplicación similar a un JPaint, es decir, una aplicación que pinte distintos tipos de figuras. Además de las figuras Cuadrado y Círculo, se deberá pintar polígonos o figuras libres, es decir, una sucesión de puntos unidos por líneas. el programa deberá poder crear figuras y eliminarlas. También permitirá crear grupos y ocultar figuras/grupos. Por último, deberá guardar en disco los dibujos realizados. 
-
-Se puede entender que por la parte de interfaz gráfico se parecerá a un JPaint, pero por la parte de manipulación de objetos a un Power Point (tratamiento vectorial de elementos).
-
-Deberá realizar de forma obligada las siguientes funciones:
-- Selección amigable del color.
-- Creación de figuras con el ratón (con la complejidad que cada uno desee).
-- Selección de figuras (como cada uno considere).
-- Modificación del color de las figuras.
-
-Deberá implementarse al menos, una de las siguientes funciones:
-- Selección de figuras con el ratón.
-- Movimiento de figuras con el ratón.
 
 
-#### Descripción de la práctica C:
-
-Práctica que no cumple con los requisitos de las dos anteriores y que ha sido aprobada por el profesor. Por ejemplo, un juego.
