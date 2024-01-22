@@ -1,0 +1,12 @@
+title Pintar un Cuadrado
+
+AppDibujo->Cuadrado: new
+Cuadrado->AppDibujo: cuadrado1
+AppDibujo->Dibujo: new
+Dibujo->AppDibujo: dibujo
+AppDibujo->Dibujo: dibujo.pintar(cuadrado1)
+AppDibujo->Util: new
+Util->AppDibujo: util
+AppDibujo->Util: util.wait(1)
+
+#https://www.websequencediagrams.com/
