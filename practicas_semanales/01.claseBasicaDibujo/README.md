@@ -36,6 +36,7 @@ javac *.java
 ##### Salida del programa
 * AppDibujo01: Crear un cuadrado, pintarlo y esperar un segundo. Repetir esta acción hasta pintar tres cuadrados diferentes. 
 * AppDibujo02: Crear un cuadrado y pintarlo. Esperar un segundo y moverlo a una nueva posición. Esperar otro segundo y volver a moverlo a otra posición del dibujo. Por último, cambiar su tamaño después de esperar un segundo.
+* AppDibujo03: Como se ha hecho en AppDibujo01, pintar 3 cuadrados pero esta vez con x, y & lado totalmente aleatorios. Para ello usar la clase Random y el método "nextInt". https://docs.oracle.com/javase/8/docs/api/java/util/Random.html#nextInt--
 
 Nótese que el programa sólo es capaz de pintar un cuadrado de forma simultánea. No se pueden mostrar los tres a la vez.
 
