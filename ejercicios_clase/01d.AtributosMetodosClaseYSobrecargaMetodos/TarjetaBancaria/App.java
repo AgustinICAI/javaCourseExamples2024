@@ -27,6 +27,7 @@ class App{
     boolean permitido = TarjetaCredito.validarImporteMovimientoSinPIN(45);
     System.out.println("operacion permitida sin pin: " + permitido); 
     
+    
     Movimiento m1 = new Movimiento("Cafeteria ICAI", 2, LocalDate.of(2024,1,22) );
     Movimiento m2 = new Movimiento("Cafeteria ICAI", 4.5, LocalDate.parse("2024-01-22"));    
     Movimiento m3 = new Movimiento("Cafeteria ICAI", 7, LocalDate.of(2024,1,22)); 

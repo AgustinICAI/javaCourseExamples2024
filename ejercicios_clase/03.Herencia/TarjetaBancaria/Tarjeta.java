@@ -1,10 +1,9 @@
 import java.util.Random;
 
-class TarjetaCredito{
+class Tarjeta{
   //ATRIBUTOS DE CLASE o ATRIBUTOS ESTATICOS
   static int LIMITE_SALDO = 2000;
   private static int SIZE_LIMIT_CVV = 1000;
-  
   static int LIMITE_DESCUBIERTO = -100;
   static int MAX_OPERACION_SIN_PIN = 30;  
   //Atributos o Atributos de instancia
@@ -18,16 +17,19 @@ class TarjetaCredito{
   int ultimoMovimiento;
   
   
+  static void setLIMITESALDO(int limite){
+     LIMITE_SALDO = limite;
+  }
   
   
   
   //ESTE NO HARÍA FALTA DEFINIRLO SINO HUBIERA MÁS CONSTRUCTORES
-  TarjetaCredito(){
+  Tarjeta(){
     movimientos = new Movimiento[1000];
     saldo = LIMITE_SALDO;
   }
   
-  TarjetaCredito(String numeroTarjeta){
+  Tarjeta(String numeroTarjeta){
     this();
     this.numeroTarjeta = numeroTarjeta;
     Random random = new Random();
