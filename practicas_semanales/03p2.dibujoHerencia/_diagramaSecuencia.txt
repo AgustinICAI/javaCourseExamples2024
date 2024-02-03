@@ -1,0 +1,12 @@
+title Pintar un Cuadrado
+
+App->Cuadrado: new
+Cuadrado->App: c
+App->Dibujo: pintar(c)
+Dibujo->Lienzo: addFigura(c)
+Dibujo->Lienzo: repaint()
+Lienzo->Lienzo: paint(Graphics g)
+Lienzo->Cuadrado: pintar(Graphics g)
+
+
+https://www.websequencediagrams.com/

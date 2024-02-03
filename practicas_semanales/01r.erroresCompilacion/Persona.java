@@ -1,52 +1,48 @@
 //Definición de la clase que construirán futuros objetos del tipo Persona
-public clas Persona
+public class Persona
 {
-    int ciudad; //Todas las personas viven en la misma ciudad
+    static String CIUDAD; //Todas las personas viven en la misma ciudad
     String nombre;
     int edad;
 
-    public Persona(String a, b, String c)
+    public Persona(String nombre, int edad)
     {
-        nombre = nombre;
-        b = edad;
-        ciudad = c;
-    }
+        this.nombre = nombre;
+        this.edad = edad;
 
-    public Persona(String a, int b)
-    {
-        this(a, b);
-    }    
+    }
+  
 
     //Métodos
-    public Strin getNombre()
+    public String getNombre()
     {
         return nombre;
     }
 
     public void setNombre(String s)
     {
-        return nombre = s;
+        nombre = s;
     }
 
     public int getEdad()
     {
-        return edad
+        return edad;
     }
 
     public void setEdad(int edad)
     {
-        if(e>0 e<120)
-            edad = edad;
+        if(edad>0 && edad<120)
+            this.edad = edad;
     }
 
-    static String estadistica()
+    String estadistica()
     {
-        return "La mitad de la edad en " + ciudad + " es: " + edad/2;
+        return "La mitad de la edad en " + CIUDAD + " es: " + edad/2;
     }
 
     String getInfo()
     {
-    	return "Nombre: " + nombre + "\nEdad:  + edad + "Ciudad" + ciudad;
+    	return "Nombre: " + nombre + "\nEdad: " + edad + "\nCiudad: " + CIUDAD;
     }
 
 }
