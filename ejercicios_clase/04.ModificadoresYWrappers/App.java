@@ -7,6 +7,7 @@ public class App{
     //Integer i = new Integer(a);DEPRECADO
     Integer i = a;//ES LO MISMO, JAVA POR DETRÁS EJECUTA LAS MISMAS ACCIONES
     //float f = i.intValue(); o i.floatValue();
+    //BOXING Y UNBOXING
     float f = i;
     
     char c = (char) f;
@@ -23,7 +24,17 @@ public class App{
     char[] c1s = {c};
     String s3 = new String(c1s);
     
+    //Opción1
+    char c2 = s1.substring(0,1).toUpperCase().toCharArray()[0];
+    //Opción2
+    int i2 = Character.codePointAt(s1.substring(0,1).toUpperCase(),0);
+    char c3 = (char)i2;
     
+    int i3 = c2;
+    
+    byte b1 = (byte)i3;
+    
+    System.out.println(b1 + " - " + c3);
     
   
   }
