@@ -43,7 +43,7 @@ public class Triangulo extends Figura
 		xs[1]=x+lado/2;
 		xs[2]=x+lado;
 		ys[0]=y;
-		ys[1]= (int)(y - lado*Math.sqrt(3) / 2);
+		ys[1]= (int)(y + lado*Math.sqrt(3) / 2);
 		ys[2]=y;
 		
 		if(relleno)

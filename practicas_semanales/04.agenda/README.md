@@ -27,4 +27,8 @@ Las opciones que se mostrarán al usuario para trabajar con la agenda, serán:
 - Se deberá diseñar el programa de tal manera que el App (el interfaz de usuario, UI) esté separado de la lógica de objetos.
 - La gestión de los objetos Persona, se realiazará en una clase de agregación llamada Agenda. Toda la funcionalidad a realizar sobre las personas no se programará en el App, estará programado en Agenda.
 - Si el día de mañana cambia este UI por otro, no debería afectar a la lógica de los objetos.
-- Se trabajará con paquetes para separar ui, domain y util
+
+### Ayuda
+
+El método porTeclado() de la clase Leer devuelve siempre un String. 
+Ver la Clase Integer para convertir este String a un int.
