@@ -1,3 +1,5 @@
+/** @author David Contreras */
+
 public class Persona
 {
     public final static int EDAD_MAXIMA = 120;

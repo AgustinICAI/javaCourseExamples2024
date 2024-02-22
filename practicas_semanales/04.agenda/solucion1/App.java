@@ -1,21 +1,29 @@
+import java.util.Arrays;
+
+/** @author David Contreras */
+
 public class App
 {
-    private static Agenda agenda = new Agenda("AGENDA");
 
+    
+    
     public static void main(String[] args)
     {
+        private static Agenda agenda = new Agenda("AGENDA");
         int opcion=0;
-
         do
         {
             opcion = App.menu(agenda.getNombre());
+            //En caso de que se introduzca otra cosa
+            if(opcion >= OpcionAgenda.values().length || opcion < 0)
+                opcion = 0;
             App.limpiar();
-            App.evaluar(opcion);
+            App.evaluar(OpcionAgenda.values()[opcion]);
             App.limpiar();            
-        }while(opcion!=9);
+        }while(opcion!=7);
 
     }
-
+    
     static int menu(String nombre)
     {
         System.out.println("################################");
@@ -25,23 +33,23 @@ public class App
         System.out.println("###  2. Buscar persona      ####");
         System.out.println("###  3. Eliminar persona    ####");
         System.out.println("###  4. Modificar persona   ####");
-        System.out.println("###  5. Mostrar lista       ####");
-        System.out.println("################################");
-        System.out.println("###  9. SALIR               ####");
+        System.out.println("###  5. Vaciar agenda       ####");
+        System.out.println("###  6. Mostrar lista       ####");
+        System.out.println("###  7. SALIR               ####");
         System.out.println("################################");
         System.out.print("  > ");
         int opc = Integer.parseInt(Leer.porTeclado());
         return opc;
     }
     
-    static void evaluar(int x)
+    static void evaluar(OpcionAgenda x)
     {
     	String nombre = "";
         String nif = "";
     	int edad = 0;
         switch(x)
         {
-        	case 1:
+        	case CREAR_PERSONA:
         	    System.out.println("*** NUEVA PERSONA ***");
         	    if(!agenda.isFull())
         	    {
@@ -56,38 +64,38 @@ public class App
     		     }
     		     else
     		     {
-    			    System.out.println("No se pueden añadir mas personas. Array lleno");
+    			    System.out.println("No se pueden aÃ±adir mas personas. Array lleno");
                     System.out.print("Pulse enter para continuar...");
                     Leer.porTeclado();        	        				    
     		     }
 	        	   
         	    break;
-        	case 2:
+            case BUSCAR_PERSONA:
         	    System.out.println("*** BUSCAR PERSONA ***");        	    
         	    System.out.println("Datos de la persona");
         	    System.out.print("NIF: ");
         	    nif = Leer.porTeclado();
                 int pos = agenda.indexOf(new Persona(nif));
                 if (pos != -1)
-                    System.out.print("Encontrado en la posición " + pos);
+                    System.out.print("Encontrado en la posiciï¿½n " + pos);
                 else
                     System.out.print("No encontrado");
 
                 System.out.print("\nPulse enter para continuar...");
                 Leer.porTeclado();        	        
         	    break;
-        	case 3:
+            case ELIMINAR_PERSONA:
         	    System.out.println("*** ELIMINAR PERSONA ***");        	    
-                pos = App.mostrarPersonasElegirPosicion();
+                pos = App.mostrarPersonasElegirPosicionPorNIF();
                 agenda.remove(pos);
 
         	    System.out.print("Objeto borrado");
         	    System.out.print("\nPulse enter para continuar...");
                 Leer.porTeclado();        	                	    
         	    break;
-        	case 4:
+            case MODIFICAR_PERSONA:
         	    System.out.println("*** MODIFICAR PERSONA ***");        	    
-                pos = App.mostrarPersonasElegirPosicion();
+                pos = App.mostrarPersonasElegirPosicionPorNIF();
                 Persona p = agenda.get(pos);
                 if(p!=null)
                 {
@@ -98,12 +106,18 @@ public class App
                 else
                     System.out.print("\nPersona no encontrada");
         	    break;
-        	case 5:
+            case VACIAR_AGENDA:
+                agenda.vaciar();
+                System.out.print("Agenda borrada");
+                System.out.print("\nPulse enter para continuar...");
+                Leer.porTeclado();
+                break;
+            case MOSTRAR_CONTENIDO:
         	    System.out.print(agenda.toString());
         	    System.out.print("\nPulse enter para continuar...");
                 Leer.porTeclado();        	        
         	    break;
-        	case 9:
+            case OTRA_OPCION:
         	    break;
         	default:
         }
@@ -117,11 +131,19 @@ public class App
     
     private static int mostrarPersonasElegirPosicion()
     {
-        System.out.println("Posición de la persona a modificar: ");
+        System.out.println("PosiciÃ³n de la persona a modificar: ");
         System.out.print(agenda);
         System.out.print("  > ");
         int pos = Integer.parseInt(Leer.porTeclado());
         return pos;
     }    
-
+    private static int mostrarPersonasElegirPosicionPorNIF()
+    {
+        System.out.println("NIF de la persona a modificar: ");
+        System.out.print(agenda);
+        System.out.print("  > ");
+        String nif = Leer.porTeclado();
+        return agenda.indexOf(new Persona(nif));
+        
+    }   
 }
