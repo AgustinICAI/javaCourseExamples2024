@@ -1,0 +1,9 @@
+[JVentanaDibujo]->1[Lienzo]
+[Lienzo]->1[JVentanaDibujo]
+[JVentanaDibujo]->1[Dibujo]
+[Dibujo]->*[Figura]
+[Figura]^-[Cuadrado]
+[Figura]^-[Circulo]
+
+
+https://yuml.me/diagram/nofunky/class/draw

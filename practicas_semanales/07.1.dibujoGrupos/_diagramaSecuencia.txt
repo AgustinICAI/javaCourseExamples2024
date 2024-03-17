@@ -1,0 +1,17 @@
+title Pintar una Figura cualquiera
+
+App->Figura: new
+Figura->App: f
+App->Dibujo: pintar("Grupo Rojo", f)
+Dibujo->Lienzo: pintar("Grupo Rojo", f)
+Lienzo->Lienzo: add(f)
+Dibujo->Lienzo: repaint()
+
+Lienzo->Lienzo: paint(Graphics g)
+loop figuras.size()
+    opt figura.isVisible()
+        Lienzo->Figura: pintar(Graphics g)
+    end
+end
+
+https://www.websequencediagrams.com/

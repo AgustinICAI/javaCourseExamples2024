@@ -1,0 +1,5 @@
+[Dibujo]->1[Lienzo]
+[Lienzo]->*[Figura]
+[Figura]^-[Cuadrado]
+[Figura]^-[Circulo]
+
