@@ -1,15 +1,12 @@
-import javax.imageio.IIOImage;
-import javax.imageio.ImageIO;
+package ui;
+
 import javax.swing.JFrame;
-import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 
 public class AppVentanaPrincipal extends JFrame {
-    FondoPrincipal fondo;
+    GameBackground fondo;
     AppVentanaPrincipal(){
         super("JMarioBros");
-        fondo = new FondoPrincipal();
+        fondo = new GameBackground();
         this.add(fondo);
         
         this.setResizable(false);
@@ -17,12 +14,12 @@ public class AppVentanaPrincipal extends JFrame {
         this.pack();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fondo.requestFocus();
+        fondo.repaint();
     }
 
 
 
     public static void main(String[] args) {
         new AppVentanaPrincipal();
-
     }
 }

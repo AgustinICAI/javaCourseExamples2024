@@ -1,3 +1,5 @@
+package domain;
+
 public abstract class Sprite {
     int x;
     int y;
