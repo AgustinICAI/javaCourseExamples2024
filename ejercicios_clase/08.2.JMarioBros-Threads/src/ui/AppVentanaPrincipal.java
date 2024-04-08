@@ -21,5 +21,6 @@ public class AppVentanaPrincipal extends JFrame {
 
     public static void main(String[] args) {
         new AppVentanaPrincipal();
+        System.out.println("Fin Hilo 1: Arrancado juego");
     }
 }

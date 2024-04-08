@@ -17,6 +17,7 @@ public class Mario extends Sprite {
     private static final int INITIAL_JUMP_SPEED = 300; //PIXELS PER SECOND
 
     private static final double INITIAL_JUMP_TIME = 0.8; //SECONDS
+    private Game game;
 
     Image[] walkingIcon;
     Image idleIcon;
@@ -28,22 +29,24 @@ public class Mario extends Sprite {
     long tsInitJump;
     int yInitJump;
 
-    public Mario() throws IOException {
+    public Mario(Game game) throws IOException {
         super(X_INITIAL_POSITION, Y_INITIAL_POSITION-INITIAL_HEIGHT, INITIAL_SPEED);
-
+        this.game = game;
         walkingIcon = new Image[3];
-        walkingIcon[0] = readIconImage("walk1.png");
-        walkingIcon[1] = readIconImage("walk2.png");
-        walkingIcon[2] = readIconImage("walk3.png");
-        jumpIcon = readIconImage("jump.png");
-        idleIcon = readIconImage("idle.png");
+        walkingIcon[0] = readIconImage("walk1.png",INITIAL_HEIGHT);
+        walkingIcon[1] = readIconImage("walk2.png",INITIAL_HEIGHT);
+        walkingIcon[2] = readIconImage("walk3.png",INITIAL_HEIGHT);
+        jumpIcon = readIconImage("jump.png",INITIAL_HEIGHT);
+        idleIcon = readIconImage("idle.png",INITIAL_HEIGHT);
     }
-    private Image readIconImage(String path) throws IOException {
-        return ImageIO.read(new File(path)).getScaledInstance(-1,INITIAL_HEIGHT,Image.SCALE_SMOOTH);
-    }
+
 
     public void moveX(int x){
-        if(this.x + x < GameBackground.WITDH && this.x + x > 0)
+        if(this.x + x >= GameBackground.WITDH-80)
+            game.moveBackground(-Mario.INITIAL_SPEED/Game.FPS);
+        else if (this.x + x <= 10)
+            game.moveBackground(Mario.INITIAL_SPEED/Game.FPS);
+        else
             this.x+=x;
     }
     public void paint(Graphics g){

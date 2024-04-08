@@ -1,9 +1,15 @@
 package domain;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+
 public abstract class Sprite {
     int x;
     int y;
     int speed;
+
 
     public Sprite(int x, int y, int speed) {
         this.x = x;
@@ -33,5 +39,9 @@ public abstract class Sprite {
 
     public void setSpeed(int speed) {
         this.speed = speed;
+    }
+
+    protected Image readIconImage(String path, int height) throws IOException {
+        return ImageIO.read(new File(path)).getScaledInstance(-1,height,Image.SCALE_SMOOTH);
     }
 }
