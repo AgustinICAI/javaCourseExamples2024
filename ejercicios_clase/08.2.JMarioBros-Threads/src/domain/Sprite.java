@@ -8,7 +8,7 @@ import java.io.IOException;
 public abstract class Sprite {
     int x;
     int y;
-    int speed;
+    int speed;//PIXELES POR SEGUNDO
 
 
     public Sprite(int x, int y, int speed) {
@@ -16,6 +16,9 @@ public abstract class Sprite {
         this.y = y;
         this.speed = speed;
     }
+
+    public abstract Shape getShape();
+    public abstract void paintShape(Graphics g);
 
     public int getX() {
         return x;

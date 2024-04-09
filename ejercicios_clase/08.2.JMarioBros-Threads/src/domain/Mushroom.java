@@ -22,4 +22,18 @@ public class Mushroom extends Sprite{
     public void update() {
         x -= INITIAL_SPEED/Game.FPS;
     }
+
+    public boolean isOutsideScreen(){
+        return this.getX()  + icon.getWidth(null)  < 0;
+    }
+
+    @Override
+    public Shape getShape() {
+        return new Rectangle(x,y,icon.getWidth(null),icon.getHeight(null));
+    }
+
+    @Override
+    public void paintShape(Graphics g) {
+        g.drawRect(x,y,icon.getWidth(null),icon.getHeight(null));
+    }
 }

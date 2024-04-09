@@ -24,6 +24,8 @@ public class Mario extends Sprite {
     Image jumpIcon;
     int posWalking = 0;
 
+    Image icon;
+
     int lastDirection;
 
     long tsInitJump;
@@ -50,22 +52,10 @@ public class Mario extends Sprite {
             this.x+=x;
     }
     public void paint(Graphics g){
-        if(posWalking==0) {
-            if(lastDirection >= 0)
-                g.drawImage(idleIcon, x, y, null);
-            else
-                g.drawImage(idleIcon, x+idleIcon.getWidth(null), y, -idleIcon.getWidth(null),idleIcon.getHeight(null) , null);
-
-        }
-        else if(posWalking > 0)
-            g.drawImage(walkingIcon[posWalking % 3], x, y, null);
-        else {//Reverse walking
-            Image icon = walkingIcon[-posWalking % 3];
-            g.drawImage(icon, x+icon.getWidth(null), y, -icon.getWidth(null),icon.getHeight(null) , null);
-        }
-
-
-
+        if(lastDirection >= 0)
+            g.drawImage(icon, x, y, null);
+        else
+            g.drawImage(icon, x+idleIcon.getWidth(null), y, -idleIcon.getWidth(null),idleIcon.getHeight(null) , null);
     }
 
 
@@ -83,6 +73,7 @@ public class Mario extends Sprite {
             posWalking = -1;
         else
             posWalking -= 1;
+        lastDirection = -this.x;
     }
 
     public void moveRight() {
@@ -91,6 +82,7 @@ public class Mario extends Sprite {
             posWalking = 1;
         else
             posWalking += 1;
+        lastDirection = this.x;
     }
 
     public void jump() {
@@ -113,5 +105,20 @@ public class Mario extends Sprite {
                 y = yInitJump;
             }
         }
+
+        if(posWalking==0)
+            icon = idleIcon;
+        else
+            icon =  walkingIcon[Math.abs(posWalking) % 3];
+    }
+
+    @Override
+    public Shape getShape() {
+        return new Rectangle(x,y,icon.getWidth(null),icon.getHeight(null));
+    }
+
+    @Override
+    public void paintShape(Graphics g) {
+        g.drawRect(x,y,icon.getWidth(null),icon.getHeight(null));
     }
 }
