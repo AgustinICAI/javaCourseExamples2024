@@ -32,7 +32,14 @@ public class GameBackground extends JPanel implements Runnable{
         this.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                keysPressed.add(e.getKeyCode());
+                if(!game.isFinJuego())
+                    keysPressed.add(e.getKeyCode());
+                else {
+                    game = new Game();
+                    Thread t = new Thread(GameBackground.this);
+                    t.start();
+                }
+
             }
             @Override
             public void keyReleased(KeyEvent e) {
@@ -59,7 +66,6 @@ public class GameBackground extends JPanel implements Runnable{
         });*/
 
         Thread t = new Thread(this);
-
         t.start();
 
     }
@@ -72,15 +78,14 @@ public class GameBackground extends JPanel implements Runnable{
 
     @Override
     public void run() {
-        while (true){
+        while (!game.isFinJuego()){
             long tsStart = System.nanoTime();
             game.recalculatePositions(keysPressed);
             game.checkCollisions();
             this.repaint();
-
             System.out.println("FPS: " + Game.FPS + ", Time Painting: " + (System.nanoTime()-tsStart)/1e6 );
             try {
-                Thread.sleep(1000/Game.FPS);
+                Thread.sleep((long) (1000/Game.FPS - (System.nanoTime()-tsStart)/1e6));
             } catch (Exception e) {
                 e.printStackTrace();
             }

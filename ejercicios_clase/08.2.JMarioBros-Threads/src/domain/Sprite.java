@@ -10,6 +10,7 @@ public abstract class Sprite {
     int y;
     int speed;//PIXELES POR SEGUNDO
 
+    Image icon;
 
     public Sprite(int x, int y, int speed) {
         this.x = x;
@@ -17,8 +18,17 @@ public abstract class Sprite {
         this.speed = speed;
     }
 
-    public abstract Shape getShape();
-    public abstract void paintShape(Graphics g);
+    public Rectangle getShape() {
+        if(icon!=null)
+            return new Rectangle(x,y,icon.getWidth(null),icon.getHeight(null));
+        else
+            return null;
+    }
+
+    public void paintShape(Graphics g) {
+        Rectangle r = getShape();
+        g.drawRect(r.x,r.y,r.width,r.height);
+    }
 
     public int getX() {
         return x;

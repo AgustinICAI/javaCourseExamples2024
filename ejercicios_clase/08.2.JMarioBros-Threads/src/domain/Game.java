@@ -9,22 +9,31 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.stream.Collectors;
 
 public class Game {
+    public static final int Y_INITIAL_POSITION = 490;
+    private long lastMushroom;
+
     private int backGroundOffset;
     Image fondo;
     Mario mario;
 
+
+    boolean finJuego = false;
+    int monedas = 0;
+    int vidas = 3;
     Collection<Mushroom> mushrooms;
 
     public static final int FPS = 30;
 
     public Game() {
         try {
-            fondo = ImageIO.read(new File("background.png"));
+            fondo = ImageIO.read(new File("resources/background.png"));
             mario = new Mario(this);
             mushrooms = new ArrayList<>();
+            lastMushroom = System.nanoTime();
             mushrooms.add(new Mushroom());
         } catch (IOException e) {
             e.printStackTrace();
@@ -39,7 +48,17 @@ public class Game {
         mushrooms.forEach(m -> m.paint(g));
         mario.paintShape(g);
         mushrooms.forEach(m -> m.paintShape(g));
-        
+        g.setFont(new Font(Font.MONOSPACED,Font.BOLD,30));
+        g.setColor(Color.RED);
+        g.drawString("Vidas: " + vidas, 200,50);
+        g.drawString("Monedas: " + monedas, 200,100);
+        if(finJuego) {
+            g.setFont(new Font(Font.MONOSPACED,Font.BOLD,50));
+            g.drawString("FIN JUEGO", 70, 300);
+            g.setFont(new Font(Font.MONOSPACED,Font.BOLD,20));
+            g.drawString("Pulse tecla para volver a empezar", 10, 330);
+
+        }
     }
 
     public void recalculatePositions(Collection<Integer> keysPressed) {
@@ -53,7 +72,22 @@ public class Game {
         if(keysPressed.contains(KeyEvent.VK_UP))
             mario.jump();
 
+        generateRandomMushroom();
         updateMovingElements();
+    }
+
+
+    private void generateRandomMushroom() {
+        long timeLastMushroom = System.nanoTime() - lastMushroom;
+        if(timeLastMushroom >= 3*1e9){
+            lastMushroom = System.nanoTime();
+            try {
+                mushrooms.add(new Mushroom());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
     }
 
     private void updateMovingElements() {
@@ -75,15 +109,32 @@ public class Game {
         mushrooms.removeAll(mushroomsDelete);
 
 
-
-
-
-
     }
 
+    HashMap<Mushroom,Long> ultimosImpactos = new HashMap<Mushroom, Long>();
+
+
     public void checkCollisions() {
+        Collection<Mushroom> mushroomsABorrar = new ArrayList<>();
         for(Mushroom m : mushrooms)
-        {}
+        {
+            if(m.getShape().intersects(mario.getShape())) {
+                if (mario.getLastShape().getMaxY() <= m.getShape().getMinY()) {//Mario salta por encima
+                    monedas += 1;
+                    mushroomsABorrar.add(m);
+                } else {
+                    if (!ultimosImpactos.containsKey(m) ||
+                            ultimosImpactos.containsKey(m) && System.nanoTime() - ultimosImpactos.get(m) > 1e9) {
+                        vidas -= 1;
+                        mario.startBlinking();
+                        ultimosImpactos.put(m, System.nanoTime());
+                    }
+                }
+            }
+        }
+        mushrooms.removeAll(mushroomsABorrar);
+        if(vidas == 0)
+            finJuego = true;
 
     }
 
@@ -91,4 +142,8 @@ public class Game {
     public void moveBackground(int offset) {
         backGroundOffset += offset;
     }
+    public boolean isFinJuego() {
+        return finJuego;
+    }
+
 }
