@@ -1,0 +1,19 @@
+title Gestionar Excepciones de Colores de las Figuras
+
+JVentanaDibujo->BtnCirculoActionListener: actionPerformed()
+BtnCirculoActionListener->JVentanaDibujo: validarColores()
+alt rgb not in [0, 255]
+   JVentanaDibujo->BtnCirculoActionListener: throws NumberFormatException()
+else else
+   JVentanaDibujo->Util: rgbToColor(r, g, b)
+end
+
+Util->Color: new Color(r, g, b)
+Color->Util: color
+Util->JVentanaDibujo: color
+Util->JVentanaDibujo: new RGBConversionException()
+JVentanaDibujo->BtnCirculoActionListener: color
+JVentanaDibujo->BtnCirculoActionListener: throws RGBConversionException()
+
+
+https://www.websequencediagrams.com/
