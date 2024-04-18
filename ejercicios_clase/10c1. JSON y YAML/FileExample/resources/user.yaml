@@ -1,0 +1,14 @@
+---
+name: John Doe
+email: john.doe@example.com
+roles:
+  - Member
+  - Admin
+preferences:
+  - size: '123'
+    zoom: '3451'
+  - size: '123'
+    zoom: '3451'
+  - size: '123'
+    zoom: '3451'
+admin: true

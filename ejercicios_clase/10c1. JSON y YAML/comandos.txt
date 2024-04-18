@@ -1,0 +1,7 @@
+#ESTANDO EN SRC
+javac -cp "../lib/*" *.java -d "../dist/"
+##PARA WINDOWS SUSTITUIR : con ; y las BARRAS / por \
+
+#ESTANDO EN DIRECTORIO PADRE
+java -cp ".:./lib/*:./dist/" ReadJSON
+

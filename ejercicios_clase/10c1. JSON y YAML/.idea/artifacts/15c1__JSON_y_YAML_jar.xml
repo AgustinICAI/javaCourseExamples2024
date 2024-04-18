@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact name="15c1. JSON y YAML:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/15c1__JSON_y_YAML_jar</output-path>
+    <root id="root">
+      <element id="archive" name="15c1. JSON y YAML.jar">
+        <element id="module-output" name="15c1. JSON y YAML" />
+      </element>
+      <element id="library" level="project" name="gson-2.9.0" />
+      <element id="library" level="project" name="snakeyaml-1.30" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="osmExample:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="06ebf329-0f27-4838-bd8f-24ee9235637c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/dist/es/icai/coronaSample/resources/waypoint_white.png" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1ZreQrEAbpkX11WqLcfkVSeQIQS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/es/icai/coronaSample/resources" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="es.icai.coronaSample" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/es/icai/coronaSample" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.JCoronaWindow">
+    <configuration name="JCoronaWindow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="es.icai.coronaSample.JCoronaWindow" />
+      <module name="osmExample" />
+      <option name="PROGRAM_PARAMETERS" value="coronacases_20200330.csv" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.icai.coronaSample.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sample4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample4_fancy.Sample4" />
+      <module name="osmExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample4_fancy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sample5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample5_tilesets.Sample5" />
+      <module name="osmExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample5_tilesets.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sample8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample8_events.Sample8" />
+      <module name="osmExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample8_events.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sample9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sample9_offline.Sample9" />
+      <module name="osmExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sample9_offline.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JCoronaWindow" />
+      <item itemvalue="Application.Sample4" />
+      <item itemvalue="Application.Sample5" />
+      <item itemvalue="Application.Sample8" />
+      <item itemvalue="Application.Sample9" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JCoronaWindow" />
+        <item itemvalue="Application.Sample4" />
+        <item itemvalue="Application.Sample5" />
+        <item itemvalue="Application.Sample9" />
+        <item itemvalue="Application.Sample8" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06ebf329-0f27-4838-bd8f-24ee9235637c" name="Default Changelist" comment="" />
+      <created>1585601626176</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585601626176</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="682" y="217" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587893359372">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="682" y="217" key="#com.intellij.execution.impl.EditConfigurationsDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1587893359372" />
+    <state x="843" y="344" width="525" height="439" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587893550033">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="843" y="344" width="525" height="439" key="#com.intellij.ide.util.TreeClassChooserDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1587893550033" />
+    <state x="725" y="284" width="530" height="546" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1585642739001">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="725" y="284" width="530" height="546" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/70.27.1850.1053@70.27.1850.1053" timestamp="1585642739001" />
+    <state x="742" y="300" width="735" height="520" key="FileChooserDialogImpl" timestamp="1587894786595">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="742" y="300" width="735" height="520" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1587894786595" />
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom" timestamp="1587894805472">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1587894805472" />
+    <state width="1804" height="275" key="GridCell.Tab.0.center" timestamp="1587894805472">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1587894805472" />
+    <state width="1804" height="275" key="GridCell.Tab.0.left" timestamp="1587894805472">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1587894805472" />
+    <state width="1804" height="275" key="GridCell.Tab.0.right" timestamp="1587894805472">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1587894805472" />
+    <state width="1804" height="340" key="GridCell.Tab.1.bottom" timestamp="1585610262402">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1585610262402" />
+    <state width="1804" height="340" key="GridCell.Tab.1.center" timestamp="1585610262402">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1585610262402" />
+    <state width="1804" height="340" key="GridCell.Tab.1.left" timestamp="1585610262402">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1585610262402" />
+    <state width="1804" height="340" key="GridCell.Tab.1.right" timestamp="1585610262402">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="340" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1585610262402" />
+    <state x="580" y="208" width="819" height="698" key="NewModule_or_Project.wizard" timestamp="1587894803509">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="580" y="208" width="819" height="698" key="NewModule_or_Project.wizard/70.27.1850.1053@70.27.1850.1053" timestamp="1587894803509" />
+    <state x="478" y="131" width="1274" height="852" key="SettingsEditor" timestamp="1587894200712">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="478" y="131" width="1274" height="852" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1587894200712" />
+    <state x="304" y="154" width="1372" height="806" key="new project wizard" timestamp="1586112353467">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="304" y="154" width="1372" height="806" key="new project wizard/70.27.1850.1053@70.27.1850.1053" timestamp="1586112353467" />
+  </component>
+</project>
