@@ -4,7 +4,7 @@ El alumno tendrá que desarrollar una aplicación Swing que gestione un tipo cua
 
 #### Fecha de entrega:
 
-<span style="color:red;font-weight:bold">Fecha del último examen que tengáis -  ~*15 de mayo*</span>
+<span style="color:red;font-weight:bold">Fecha del último examen que tengáis -  *24 de mayo*</span>
 
 
 #### Entregable:
